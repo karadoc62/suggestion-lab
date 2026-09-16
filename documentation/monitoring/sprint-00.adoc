@@ -1,0 +1,48 @@
+= Sprint 0
+:toc:
+
+== Initialisation du projet
+
+Le Sprint 0 est un peu particulier. Dans certaines équipes Scrum strictes, on évite même cette appellation, mais elle est très courante en entreprise pour préparer le socle technique.
+
+== Objectif du sprint
+
+Disposer d'un dépôt Git propre et documenté permettant de commencer le développement de Suggestion Lab.
+
+== US-001 — Initialiser le dépôt
+=== User Story
+
+En tant que développeur, je veux disposer d'un dépôt structuré afin de pouvoir développer indépendamment le client, le serveur et la documentation.
+
+[cols="3,1", options="header"]
+|===
+| Élément | État
+| US-001 Initialiser le dépôt |	🟡 En cours
+| Créer dépôt Git |	À faire
+| Créer branche chore/init-project |	À faire
+| Créer arborescence |	À faire
+| Créer README |	À faire
+| Créer architecture.adoc |	À faire
+| Créer .gitignore |	À faire
+| Premier commit |	À faire
+|===
+
+=== Critères d'acceptation
+
+À la fin nous voulons :
+```Text
+suggestion-lab/
+│
+├── client/
+│
+├── server/
+│
+├── documentation/
+│
+│   └── architecture.adoc
+│
+├── .gitignore
+├── README.md
+└── .git/
+```
+

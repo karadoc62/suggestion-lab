@@ -1,0 +1,20 @@
+= Architecture de Suggestion Lab
+Frédéric Gobfert
+:toc:
+
+== Objectif
+
+Suggestion Lab est une applciation pédagogique permettant de gérer des suggestions et leur cycle de vie.
+
+== Architecture
+L'applciation est composée de deux parties principales:
+
+* un client Angular,
+* un serveur Java déployé sur WildFly
+
+== Persistance
+
+L'application utilisera :
+
+* PostgreSQL pour les données métier;
+* MongoDB pour la journalisation des évènements.
