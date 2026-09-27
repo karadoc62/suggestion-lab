@@ -1,0 +1,3 @@
+rootProject.name = 'suggestion-lab' // nom du projet racine
+
+include 'server' // sous projets à inclure

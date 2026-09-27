@@ -46,3 +46,45 @@ suggestion-lab/
 └── .git/
 ```
 
+== US-002 - Préparer l'environnement Java / Gradle
+
+En tant que développeur,
+je veux disposer d'un environnement Java/Gradle reproductible
+afin de pouvoir construire le serveur de Suggestion Lab.
+
+=== Critères d'acceptation
+
+[cols="1,3", options="header"]
+|===
+| AC1 | Le JDK utilisé est identifié.
+| AC2 | Gradle est utilisable via le Wrapper.
+| AC3 | Le projet Gradle reconnaît le module `server`.
+| AC4 | Une classe Java simple peut être compilée.
+| AC5 | La commande `./gradlew build` fonctionne.
+|===
+
+
+=== Tâches
+
+[cols="3,1", options="header"]
+|===
+| Tâche | État
+
+| Identifier la version du JDK
+| ✅
+
+| Mettre en place Gradle
+| ✅
+
+| Mettre en place le Gradle Wrapper
+| ✅
+
+| Configurer le module server
+| ✅
+
+| Compiler une première classe Java
+| ✅
+
+| Vérifier le build
+| ✅
+|===

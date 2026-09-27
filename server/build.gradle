@@ -1,0 +1,25 @@
+plugins{
+    id 'java' // signifie le module server est un projet Java
+}
+
+java{ // configure le plugin Java chargé ci-dessus
+    toolchain{
+        languageVersion = JavaLanguageVersion.of(21) // Pour compiler ce projet Java, je demande un JDK Java 21
+    }
+}
+
+repositories {
+    mavenCentral() // Lorsque j’ai besoin d’une bibliothèque Java externe, cherche-la dans Maven Central. Maven Central est essentiellement un grand dépôt de bibliothèques Java. (ici utile pour JUnit)
+}
+
+dependencies {
+    // JUnit est nécessaire pour compiler/exécuter mes tests, mais pas pour mon application finale.
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test{
+    useJUnitPlatform() // utilise la plateforme JUnit pour découvrir et lancer mes tests.
+}
