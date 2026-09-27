@@ -8,5 +8,10 @@
 # Logs
 *.log
 
+# Java / Gradle
+*.class
+.gradle/
+**/build/
+
 # Divers
 notesPersonnelles/
