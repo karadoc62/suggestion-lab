@@ -1,10 +1,14 @@
 plugins{
+    /* L'ancienne écriture :
+        apply plugin: 'java'
+        apply plugin: 'war'*/
     id 'java' // signifie le module server est un projet Java
+    id 'war'  // Gradle sait construire une appli web Java
 }
 
 java{ // configure le plugin Java chargé ci-dessus
     toolchain{
-        languageVersion = JavaLanguageVersion.of(21) // Pour compiler ce projet Java, je demande un JDK Java 21
+        languageVersion = JavaLanguageVersion.of(17) // Pour compiler ce projet Java, je demande un JDK Java 17
     }
 }
 
@@ -18,6 +22,9 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter'
 
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    // Anicennement : providedCompile "javax:javaee-api:8.0.1"
+    compileOnly 'javax:javaee-api:8.0.1' // Wildfly fournit lui même les implémentations JavaEE
 }
 
 test{

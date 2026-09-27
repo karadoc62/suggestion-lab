@@ -88,3 +88,17 @@ afin de pouvoir construire le serveur de Suggestion Lab.
 | Vérifier le build
 | ✅
 |===
+
+
+== US-003 : préparer le déploiement WildFly
+
+En tant que développeur,
+je veux pouvoir produire et déployer une application web Java
+afin d'exécuter le serveur Suggestion Lab avec WildFly.
+
+Critère	Résultat attendu
+AC1	Le serveur produit un fichier .war
+AC2	WildFly peut être démarré localement
+AC3	Le WAR peut être déployé dans WildFly
+AC4	WildFly détecte correctement l'application
+AC5	Le déploiement apparaît sans erreur dans les logs
