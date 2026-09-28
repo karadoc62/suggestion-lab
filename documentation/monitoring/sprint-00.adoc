@@ -102,3 +102,26 @@ AC2	WildFly peut être démarré localement
 AC3	Le WAR peut être déployé dans WildFly
 AC4	WildFly détecte correctement l'application
 AC5	Le déploiement apparaît sans erreur dans les logs
+
+
+== US-004 — Première API REST Java EE
+
+
+En tant que développeur,
+je veux exposer un endpoint REST minimal
+afin de vérifier que le serveur Java EE peut recevoir une requête HTTP
+et retourner une réponse JSON.
+
+=== Critères d'acceptation
+
+* AC1 - JAX-RS est configuré avec une racine `/api`.
+* AC2 - Une ressource `/hello` est exposée.
+* AC3 - `GET /server/api/hello` retourne un code HTTP 200.
+* AC4 - La réponse possède le type `application/json`.
+* AC5 - La réponse contient le message `Suggestion Lab`.
+* AC6 - Une route inexistante retourne HTTP 404.
+* AC7 - La réponse JSON est produite à partir d'un objet Java et non d'une String JSON écrite manuellement.
+* AC8 - La ressource possède au moins un test unitaire.
+* AC9 - `./gradlew clean :server:build` réussit.
+
+
